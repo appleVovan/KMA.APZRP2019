@@ -1,7 +1,7 @@
-namespace KMA.APZRP2019.Providers.DB.EntityFramework.Migrations
-{
-    using System.Data.Entity.Migrations;
+using System.Data.Entity.Migrations;
 
+namespace KMA.APZRP2019.WalletSimulator.Providers.DB.EntityFramework.Migrations
+{
     internal sealed class Configuration : DbMigrationsConfiguration<WalletDBContext>
     {
         public Configuration()

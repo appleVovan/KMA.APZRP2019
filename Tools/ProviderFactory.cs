@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Configuration;
-using KMA.APZRP2019.Providers;
+using KMA.APZRP2019.WalletSimulator.Providers;
 
-namespace KMA.APZRP2019.Tools
+namespace KMA.APZRP2019.WalletSimulator.Tools
 {
     public static class ProviderFactory
     {

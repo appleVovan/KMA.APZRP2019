@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{33AA547D-64E4-4F39-A075-34B65E5B59A6}</ProjectGuid>
+    <ProjectGuid>{979D7CCB-1EC0-439E-9C73-B4C0CBE2999B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>KMA.APZRP2019.WalletSimulator.DBModels</RootNamespace>
-    <AssemblyName>KMA.APZRP2019.WalletSimulator.DBModels</AssemblyName>
+    <RootNamespace>KMA.APZRP2019.WalletSimulator.Server.Implementation</RootNamespace>
+    <AssemblyName>KMA.APZRP2019.WalletSimulator.Server.Implementation</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -33,7 +33,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,9 +41,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IDBModel.cs" />
+    <Compile Include="WalletSimulatorServiceImpl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DBModels\DBModels.csproj">
+      <Project>{33AA547D-64E4-4F39-A075-34B65E5B59A6}</Project>
+      <Name>DBModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Providers\Providers.csproj">
+      <Project>{96144D9D-B30C-4F14-B33B-55437FEA2D48}</Project>
+      <Name>Providers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Tools\Tools.csproj">
+      <Project>{D4B484A1-55E9-4243-8AF6-61FD10DBFC41}</Project>
+      <Name>Tools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WCFServerInterface\WalletSimulatorServerInterface.csproj">
+      <Project>{1D762E4C-1AAE-4608-BABD-38C8974E811B}</Project>
+      <Name>WalletSimulatorServerInterface</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,20 +1,25 @@
-﻿using KMA.APZRP2019.DBModels;
-using KMA.APZRP2019.Tools;
+﻿using System.ServiceModel;
+using KMA.APZRP2019.WalletSimulator.DBModels;
 namespace Tester
 {
     class Program
     {
         static void Main(string[] args)
         {
-            
-            using (var context = ProviderFactory.CreateNewDBProvider())
-            {
-                context.Add(new User("12345", "12345", "12345", "12345"));
-            }
-            using (var context = ProviderFactory.CreateNewDBProvider())
-            {
-                var users = context.SelectAll<User>();
-            }
+            var serv = new ServiceReference1.WalletSimulatorClient("ServerWCFIIS");
+            var users = serv.GetAllUsers();
+
+            //using (var channelFactory = new ChannelFactory<IWalletSimulator>("Server"))
+            //{
+            //    IWalletSimulator proxy = channelFactory.CreateChannel();
+            //    var user = new User("1", "1", "1", "1");
+            //    proxy.AddUser(user);
+            //}
+            //using (var channelFactory = new ChannelFactory<IWalletSimulator>("Server"))
+            //{
+            //    IWalletSimulator proxy = channelFactory.CreateChannel();
+            //    var userList = proxy.GetAllUsers();
+            //}            
         }
     }
 }

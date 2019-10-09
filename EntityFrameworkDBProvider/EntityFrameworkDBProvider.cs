@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
-using KMA.APZRP2019.DBModels;
+using KMA.APZRP2019.WalletSimulator.DBModels;
 
-namespace KMA.APZRP2019.Providers.DB.EntityFramework
+namespace KMA.APZRP2019.WalletSimulator.Providers.DB.EntityFramework
 {
     public class EntityFrameworkDBProvider:IDBProvider
     {

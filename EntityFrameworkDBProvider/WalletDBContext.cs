@@ -1,9 +1,9 @@
 ﻿using System.Data.Entity;
-using KMA.APZRP2019.Providers.DB.EntityFramework.Migrations;
-using KMA.APZRP2019.Providers.DB.EntityFramework.ModelConfiguration;
-using User = KMA.APZRP2019.DBModels.User;
+using KMA.APZRP2019.WalletSimulator.Providers.DB.EntityFramework.Migrations;
+using KMA.APZRP2019.WalletSimulator.Providers.DB.EntityFramework.ModelConfiguration;
+using User = KMA.APZRP2019.WalletSimulator.DBModels.User;
 
-namespace KMA.APZRP2019.Providers.DB.EntityFramework
+namespace KMA.APZRP2019.WalletSimulator.Providers.DB.EntityFramework
 {
     public class WalletDBContext:DbContext
     {

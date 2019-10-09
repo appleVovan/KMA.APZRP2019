@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b0834bb8-8a0b-4ebe-b605-4f18213aeb0d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50212/WalletWCFServiceIIS.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WalletWCFServiceIIS.disco" MetadataType="Disco" ID="4422e4f3-e466-4517-9956-81f2790631cb" SourceId="1" SourceUrl="http://localhost:50212/WalletWCFServiceIIS.svc?disco" />
+    <MetadataFile FileName="WalletWCFServiceIIS.xsd" MetadataType="Schema" ID="fa25afc8-fe73-413a-ac2f-35a48df92ba3" SourceId="1" SourceUrl="http://localhost:50212/WalletWCFServiceIIS.svc?xsd=xsd1" />
+    <MetadataFile FileName="WalletWCFServiceIIS.wsdl" MetadataType="Wsdl" ID="d884f813-38e2-4412-a81e-840ee32cc52d" SourceId="1" SourceUrl="http://localhost:50212/WalletWCFServiceIIS.svc?wsdl" />
+    <MetadataFile FileName="WalletWCFServiceIIS1.xsd" MetadataType="Schema" ID="244fe77f-1e46-4f52-b4a8-c9cc28603086" SourceId="1" SourceUrl="http://localhost:50212/WalletWCFServiceIIS.svc?xsd=xsd0" />
+    <MetadataFile FileName="WalletWCFServiceIIS2.xsd" MetadataType="Schema" ID="bcf7487a-dd7b-4d2c-bdd4-445da46b5245" SourceId="1" SourceUrl="http://localhost:50212/WalletWCFServiceIIS.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

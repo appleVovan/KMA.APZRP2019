@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="MA.APZRP2019.WalletSimulator.Server.WCFServerIIS.WalletWCFServiceIIS" CodeBehind="WalletWCFServiceIIS.svc.cs" %>

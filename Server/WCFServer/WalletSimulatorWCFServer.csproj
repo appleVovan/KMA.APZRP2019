@@ -4,16 +4,18 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{33AA547D-64E4-4F39-A075-34B65E5B59A6}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>KMA.APZRP2019.WalletSimulator.DBModels</RootNamespace>
-    <AssemblyName>KMA.APZRP2019.WalletSimulator.DBModels</AssemblyName>
+    <ProjectGuid>{AFB5A142-C907-4719-9570-D5CB188D8EA0}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>KMA.APZRP2019.WalletSimulator.Server.WCFServer</RootNamespace>
+    <AssemblyName>WalletSimulatorWCFServer</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +25,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -31,9 +34,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,9 +50,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IDBModel.cs" />
+    <Compile Include="WCFServiceInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WCFServiceInstaller.Designer.cs">
+      <DependentUpon>WCFServiceInstaller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="WalletWCFService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WalletWCFService.Designer.cs">
+      <DependentUpon>WalletWCFService.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WalletServiceImplementation\WalletSimulatorServerImplementation.csproj">
+      <Project>{979D7CCB-1EC0-439E-9C73-B4C0CBE2999B}</Project>
+      <Name>WalletSimulatorServerImplementation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WCFServerInterface\WalletSimulatorServerInterface.csproj">
+      <Project>{1d762e4c-1aae-4608-babd-38c8974e811b}</Project>
+      <Name>WalletSimulatorServerInterface</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

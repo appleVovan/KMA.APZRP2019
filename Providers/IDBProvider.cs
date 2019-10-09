@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using KMA.APZRP2019.DBModels;
+using KMA.APZRP2019.WalletSimulator.DBModels;
 
-namespace KMA.APZRP2019.Providers
+namespace KMA.APZRP2019.WalletSimulator.Providers
 {
     public interface IDBProvider:IDisposable
     {

@@ -33,8 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="KMA.APZRP2019.WalletSimulator.DBModels, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -43,26 +46,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\ServiceReference1\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Connected Services\ServiceReference1\WalletWCFServiceIIS.wsdl" />
+    <None Include="Connected Services\ServiceReference1\WalletWCFServiceIIS.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference1\WalletWCFServiceIIS1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference1\WalletWCFServiceIIS2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\KMA.APZRP2019.WalletSimulator.DBModels.User.datasource" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DBModels\DBModels.csproj">
       <Project>{33AA547D-64E4-4F39-A075-34B65E5B59A6}</Project>
       <Name>DBModels</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Providers\Providers.csproj">
-      <Project>{96144D9D-B30C-4F14-B33B-55437FEA2D48}</Project>
-      <Name>Providers</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Tools\Tools.csproj">
-      <Project>{d4b484a1-55e9-4243-8af6-61fd10dbfc41}</Project>
-      <Name>Tools</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\ServiceReference1\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference1\WalletWCFServiceIIS.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference1\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

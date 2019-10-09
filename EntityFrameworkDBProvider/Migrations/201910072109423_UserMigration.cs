@@ -1,8 +1,9 @@
-namespace KMA.APZRP2019.Providers.DB.EntityFramework.Migrations
+namespace KMA.APZRP2019.WalletSimulator.Providers.DB.EntityFramework.Migrations
 {
+    using System;
     using System.Data.Entity.Migrations;
     
-    public partial class User : DbMigration
+    public partial class UserMigration : DbMigration
     {
         public override void Up()
         {

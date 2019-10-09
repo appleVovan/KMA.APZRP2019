@@ -7,8 +7,8 @@
     <ProjectGuid>{96144D9D-B30C-4F14-B33B-55437FEA2D48}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>KMA.APZRP2019.Providers</RootNamespace>
-    <AssemblyName>KMA.APZRP2019.Providers</AssemblyName>
+    <RootNamespace>KMA.APZRP2019.WalletSimulator.Providers</RootNamespace>
+    <AssemblyName>KMA.APZRP2019.WalletSimulator.Providers</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

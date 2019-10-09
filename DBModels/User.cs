@@ -1,14 +1,21 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
-namespace KMA.APZRP2019.DBModels
+namespace KMA.APZRP2019.WalletSimulator.DBModels
 {
+    [DataContract]
     public class User:IDBModel
     {
         #region Fields
+        [DataMember]
         private Guid _guid;
+        [DataMember]
         private string _firstName;
+        [DataMember]
         private string _lastName;
+        [DataMember]
         private string _email;
+        [DataMember]
         private string _password;
         #endregion
 
