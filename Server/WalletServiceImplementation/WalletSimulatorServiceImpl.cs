@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using KMA.APZRP2019.WalletSimulator.DBModels;
+using KMA.APZRP2019.WalletSimulator.EntityFrameworkWrapper;
 using KMA.APZRP2019.WalletSimulator.Server.Interface;
-using KMA.APZRP2019.WalletSimulator.Tools;
 
 namespace KMA.APZRP2019.WalletSimulator.Server.Implementation
 {
@@ -10,17 +11,18 @@ namespace KMA.APZRP2019.WalletSimulator.Server.Implementation
     {
         public void AddUser(User user)
         {
-            using (var dbProvider = ProviderFactory.CreateNewDBProvider())
+            using (var context = new WalletDBContext())
             {
-                dbProvider.Add(user);
+                context.Users.Add(user);
+                context.SaveChanges();
             }
         }
 
         public IEnumerable<User> GetAllUsers()
         {
-            using (var dbProvider = ProviderFactory.CreateNewDBProvider())
+            using (var context = new WalletDBContext())
             {
-                return dbProvider.SelectAll<User>().ToList();
+                return context.Users.Include(u=>u.Dogs).ToList();
             }
         }
     }

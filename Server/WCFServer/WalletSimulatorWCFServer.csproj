@@ -70,7 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WalletServiceImplementation\WalletSimulatorServerImplementation.csproj">
-      <Project>{979D7CCB-1EC0-439E-9C73-B4C0CBE2999B}</Project>
+      <Project>{979d7ccb-1ec0-439e-9c73-b4c0cbe2999b}</Project>
       <Name>WalletSimulatorServerImplementation</Name>
     </ProjectReference>
     <ProjectReference Include="..\WCFServerInterface\WalletSimulatorServerInterface.csproj">

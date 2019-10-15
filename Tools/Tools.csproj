@@ -42,19 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProvidersConfiguration.cs" />
-    <Compile Include="ProviderFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Providers\Providers.csproj">
-      <Project>{96144D9D-B30C-4F14-B33B-55437FEA2D48}</Project>
-      <Name>Providers</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Server\WCFServerInterface\WalletSimulatorServerInterface.csproj">
-      <Project>{1d762e4c-1aae-4608-babd-38c8974e811b}</Project>
-      <Name>WalletSimulatorServerInterface</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

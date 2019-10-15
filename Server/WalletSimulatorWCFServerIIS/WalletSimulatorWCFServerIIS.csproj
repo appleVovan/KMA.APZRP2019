@@ -83,19 +83,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\DBModels\DBModels.csproj">
-      <Project>{33AA547D-64E4-4F39-A075-34B65E5B59A6}</Project>
+      <Project>{33aa547d-64e4-4f39-a075-34b65e5b59a6}</Project>
       <Name>DBModels</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\EntityFrameworkDBProvider\EntityFrameworkDBProvider.csproj">
-      <Project>{e096a4b3-7c55-4288-96ad-2b6900907f99}</Project>
-      <Name>EntityFrameworkDBProvider</Name>
-    </ProjectReference>
     <ProjectReference Include="..\WalletServiceImplementation\WalletSimulatorServerImplementation.csproj">
-      <Project>{979D7CCB-1EC0-439E-9C73-B4C0CBE2999B}</Project>
+      <Project>{979d7ccb-1ec0-439e-9c73-b4c0cbe2999b}</Project>
       <Name>WalletSimulatorServerImplementation</Name>
     </ProjectReference>
     <ProjectReference Include="..\WCFServerInterface\WalletSimulatorServerInterface.csproj">
-      <Project>{1D762E4C-1AAE-4608-BABD-38C8974E811B}</Project>
+      <Project>{1d762e4c-1aae-4608-babd-38c8974e811b}</Project>
       <Name>WalletSimulatorServerInterface</Name>
     </ProjectReference>
   </ItemGroup>

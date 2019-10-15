@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\DBModels\DBModels.csproj">
-      <Project>{33AA547D-64E4-4F39-A075-34B65E5B59A6}</Project>
+      <Project>{33aa547d-64e4-4f39-a075-34b65e5b59a6}</Project>
       <Name>DBModels</Name>
     </ProjectReference>
   </ItemGroup>

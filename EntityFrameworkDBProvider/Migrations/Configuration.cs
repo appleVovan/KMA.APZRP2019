@@ -1,6 +1,6 @@
 using System.Data.Entity.Migrations;
 
-namespace KMA.APZRP2019.WalletSimulator.Providers.DB.EntityFramework.Migrations
+namespace KMA.APZRP2019.WalletSimulator.EntityFrameworkWrapper.Migrations
 {
     internal sealed class Configuration : DbMigrationsConfiguration<WalletDBContext>
     {

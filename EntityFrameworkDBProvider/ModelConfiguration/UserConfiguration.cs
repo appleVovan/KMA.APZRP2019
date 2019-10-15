@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity.ModelConfiguration;
 using KMA.APZRP2019.WalletSimulator.DBModels;
 
-namespace KMA.APZRP2019.WalletSimulator.Providers.DB.EntityFramework.ModelConfiguration
+namespace KMA.APZRP2019.WalletSimulator.EntityFrameworkWrapper.ModelConfiguration
 {
     public class UserConfiguration : EntityTypeConfiguration<User>
     {

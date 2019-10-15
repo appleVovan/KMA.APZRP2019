@@ -1,9 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
 
 namespace KMA.APZRP2019.WalletSimulator.DBModels
 {
-    [DataContract]
+    [DataContract(IsReference = true)]
     public class User:IDBModel
     {
         #region Fields
@@ -17,6 +18,8 @@ namespace KMA.APZRP2019.WalletSimulator.DBModels
         private string _email;
         [DataMember]
         private string _password;
+        [DataMember]
+        private List<Dog> _dogs;
         #endregion
 
         #region Properties
@@ -73,11 +76,17 @@ namespace KMA.APZRP2019.WalletSimulator.DBModels
             }
             set { _password = value; }
         }
+
+        public virtual List<Dog> Dogs
+        {
+            get => _dogs;
+            set => _dogs = value;
+        }
         #endregion
 
         #region Constructor
 
-        public User(string firstName, string lastName, string email, string password)
+        public User(string firstName, string lastName, string email, string password):this()
         {
             _guid = Guid.NewGuid();
             _firstName = firstName;
@@ -88,7 +97,7 @@ namespace KMA.APZRP2019.WalletSimulator.DBModels
 
         public User()
         {
-            
+            _dogs = new List<Dog>();
         }
         #endregion
 
